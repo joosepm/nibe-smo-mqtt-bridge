@@ -231,12 +231,12 @@ value_mappings:
   Pool: Pool
   Pool 2: Pool 2
   Preheating: Vorwärmung
-  Price per kWh: Preis pro kWh
+  Price per kWh: Preis/kWh
   Radiator: Heizkörper
-  Radiator & Underfloor heating: Heizkörper & Fußbodenheizung
+  Radiator & Underfloor heating: Hzk.+Fußbhzg.
   Running: Läuft
-  Saving: Sparen
-  Saving PLUS: Sparen PLUS
+  Saving: Einsparung
+  Saving PLUS: Einsparung PLUS
   Standard: Standard
   Starting: Startet
   Transfer: Transfer
@@ -248,3 +248,14 @@ value_mappings:
   Small: Niedrig
   Medium: Mittel
   Large: Hoch
+  Continuous: Dauerhaft
+  10 days cont.: 10 Tage dauerhaft
+  Fixed delta: Delta fest
+  Target temp: Zieltemperatur
+  Delta temp: Deltatemperatur
+  Holiday: Urlaub
+  Away mode: AbwesenhModus
+  Cool. mode ind. w delay: Kühlmodusanz. m Verzög.
+  HW circulation: BW-Zirkulation
+  Ext. HM pump: Ext. HU-Pumpe
+  Smart control: Smart Control

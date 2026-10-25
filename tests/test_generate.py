@@ -8665,8 +8665,8 @@ class TestConfigTranslationsParity(unittest.TestCase):
         """3260's states follow the SG Ready section of NIBE's installer
         manual in each language (SMO S40 or VVM S320), with the word for
         "mode" left out as in English — e.g. Dutch "Stand lage prijs" gives
-        "Lage prijs". Not 10614's request labels (issue #40). Spanish and
-        French have no manual on file and keep the English names."""
+        "Lage prijs" — except in Estonian and Latvian, where it doesn't
+        split off ("Tavarežiim", "Zemu izmaksu režīms"). Not 10614's request labels (issue #40)."""
         import yaml as _yaml
         from nibe_entity_detection import _lookup_manual_mapping
 
@@ -8681,6 +8681,27 @@ class TestConfigTranslationsParity(unittest.TestCase):
             "pl": ["Normalny", "Blokowanie", "Oszczędny", "Nadmiar mocy"],
             "cs": ["Normální", "Blokování", "Nízká cena", "Nadbytečný výkon"],
             "ro": ["Normal", "Blocare", "Preț scăzut", "Supracapacitate"],
+            "fr": ["Normal", "Blocage", "Économique", "Surrégime"],
+            "es": ["Normal", "Bloqueo", "Bajo coste", "Sobrecapacidad"],
+            "et": [
+                "Tavarežiim",
+                "Blokeerida",
+                "Madala hinna režiim",
+                "Liigse tootmisvõimsuse režiim",
+            ],
+            "ru": ["Нормальный", "Блокировка", "Низкие цены", "Избыточная мощность"],
+            "hu": ["Normál", "Letiltás", "Olcsó", "Többletkapacitás"],
+            "sk": ["Normálny", "Blokovanie", "Nízka cena", "Nadbytočná kapacita"],
+            "lt": ["Normalus", "Blokavimas", "Maža kaina", "Pertekliniai pajėgumai"],
+            "lv": [
+                "Standarta režīms",
+                "Bloķēšana",
+                "Zemu izmaksu režīms",
+                "Jaudas pārpalikuma režīms",
+            ],
+            "sl": ["Normalni", "Blokada", "Nizkocenovni", "Presežna zmogljivost"],
+            "bg": ["Нормален", "Блокиране", "Ниска цена", "Свръхкапацитет"],
+            "uk": ["Нормальний", "Блокування", "Низька ціна", "Надлишкова потужність"],
         }
         labels = list(_lookup_manual_mapping(3260).values())
         for path in self.translation_files:
@@ -8689,6 +8710,24 @@ class TestConfigTranslationsParity(unittest.TestCase):
                     mappings = _yaml.safe_load(f)["value_mappings"]
                 got = [mappings.get(label) for label in labels]
                 self.assertEqual(got, expected[path.stem], path.name)
+
+    def test_aux_output_holiday_and_away_mode_come_from_every_manual(self):
+        """Output AUX1's "Holiday" and "Away mode" are in every manual's list
+        of AUX output functions, so every language translates them; the
+        abbreviated screen labels (e.g. Finnish "Käyttövesikierto" for HW
+        circulation) only where a manual prints them."""
+        import yaml as _yaml
+
+        for path in self.translation_files:
+            if path.stem == "en":
+                continue
+            with open(path, encoding="utf-8") as f:
+                mappings = _yaml.safe_load(f).get("value_mappings") or {}
+            for label in ("Holiday", "Away mode"):
+                self.assertIn(label, mappings, f"{path.name}: {label}")
+        with open(self.translations_dir / "fi.yaml", encoding="utf-8") as f:
+            fi = _yaml.safe_load(f)["value_mappings"]
+        self.assertEqual(fi["HW circulation"], "Käyttövesikierto")
 
     def test_value_mappings_translations_are_unique_within_each_language(self):
         """Two English labels must never translate to the same string.

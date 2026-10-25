@@ -187,7 +187,7 @@ value_mappings:
   24h: 24t
   Active: Aktiv
   Active alarm: Aktiv alarm
-  Additional heat only: Bare tilleggsvarme
+  Additional heat only: Bare till.varme
   Auto: Auto
   CO2: CO2
   Calibration: Kalibrering
@@ -205,7 +205,7 @@ value_mappings:
   Idle: Hvilende
   Inactive: Inaktiv
   Intermittent: Intermittent
-  Manual: Manuell
+  Manual: Manuelt
   No alarm: Ingen alarm
   'Off': Av
   'On': På
@@ -220,9 +220,9 @@ value_mappings:
   Preheating: Forvarmer
   Price per kWh: Pris per kWh
   Radiator: Radiator
-  Radiator & Underfloor heating: Radiator og gulvvarme
+  Radiator & Underfloor heating: Rad + gulvvarme
   Running: Kjører
-  Saving: Sparing
+  Saving: Besparelse
   Saving PLUS: Sparing PLUS
   Standard: Standard
   Starting: Starter
@@ -237,3 +237,11 @@ value_mappings:
   Large: Stort
   Target temp: Måltemp
   Delta temp: Deltatemp
+  Continuous: Kontinuerlig
+  10 days cont.: 10 dager kont.
+  Fixed delta: Fast delta
+  Holiday: Ferie
+  Away mode: Bortemodus
+  Cool. mode ind. w delay: Kjølepos.ind. med forsink.
+  HW circulation: VV-sirkulasjon
+  Ext. HM pump: Ekst. VB-pumpe

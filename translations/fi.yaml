@@ -229,7 +229,7 @@ value_mappings:
   Preheating: Esilämmittää
   Price per kWh: Hinta per kWh
   Radiator: Lämpöpatteri
-  Radiator & Underfloor heating: Lämpöpatteri ja lattialämmitys
+  Radiator & Underfloor heating: Pat + lat.läm
   Running: Käynnissä
   Saving: Säästö
   Saving PLUS: Säästö PLUS
@@ -246,3 +246,11 @@ value_mappings:
   Large: Suuri
   Target temp: Tavoitelämpötila
   Delta temp: Lämpötilaero
+  Continuous: Jatkuva
+  10 days cont.: 10 pv jatkuva
+  Fixed delta: Kiinteä delta
+  Holiday: Loma
+  Away mode: Poissaolotila
+  HW circulation: Käyttövesikierto
+  Ext. HM pump: Ulk. kv-pumppu
+  Cool. mode ind. w delay: Jäähd.tilan ilm. viiveellä

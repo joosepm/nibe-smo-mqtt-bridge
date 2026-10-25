@@ -196,7 +196,7 @@ value_mappings:
   24h: 24h
   Active: Actif
   Active alarm: Alarme active
-  Additional heat only: Chauffage d'appoint uniquement
+  Additional heat only: Appt uniq.
   Auto: Auto
   CO2: CO2
   Calibration: Calibrage
@@ -227,13 +227,31 @@ value_mappings:
   Pool: Piscine
   Pool 2: Piscine 2
   Preheating: Préchauffage
-  Price per kWh: Prix par kWh
+  Price per kWh: Tarif au kWh
   Radiator: Radiateur
-  Radiator & Underfloor heating: Radiateur et chauffage au sol
+  Radiator & Underfloor heating: Rad. + pl. chauff.
   Running: En marche
-  Saving: Économie
-  Saving PLUS: Économie PLUS
+  Saving: Éco.
+  Saving PLUS: Éco. PLUS
   Standard: Standard
   Starting: Démarrage
   Transfer: Transfert
-  Underfloor heating: Chauffage au sol
+  Underfloor heating: Planch. ch.
+  Small: Faible
+  Medium: Moyenne
+  Large: Élevée
+  Normal: Normal
+  Blocking: Blocage
+  Low price: Économique
+  Overcapacity: Surrégime
+  Continuous: Continu
+  10 days cont.: 10 j cont.
+  Fixed delta: Delta fixe
+  Target temp: Temp. cible
+  Delta temp: Temp. delta
+  Holiday: Vacances
+  Away mode: Mode Absence
+  Cool. mode ind. w delay: Ind. mode raf. avec délai
+  HW circulation: Circulation ECS
+  Ext. HM pump: Ppe chauff. ext.
+  Smart control: Commande intelligente

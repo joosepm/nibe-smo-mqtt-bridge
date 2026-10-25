@@ -26,11 +26,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Newly translated from the same manuals: hot water demand (Small /
     Medium / Large) and the hot water charging method (Target temp /
     Delta temp, where the manual has that menu).
-  - Spanish and French had no manual to check against and are unchanged.
-- **Romanian translation** (`language: ro`): the add-on settings screen,
-  and the value labels NIBE's Romanian SMO S40 installer manual names —
-  operating mode, SG Ready, hot water demand, flow setting and the like.
-  Other labels stay English.
+  - French and Spanish now too, from the manuals on NIBE's own French and
+    Spanish product pages: SG Ready, hot water demand, operating mode and
+    flow setting (e.g. French "Appoint unique", "Plancher chauffant").
+  - Brine pump operating modes (Continuous, 10 days cont., Fixed delta)
+    in French, German, Finnish, Swedish, Dutch, Danish, Norwegian,
+    Italian, Polish, Spanish, Czech, Slovak and Romanian, from NIBE's
+    S1155 manuals.
+  - Danish and Norwegian "Manual" as their 2025 manuals word it
+    ("Manuelt"); Danish hot water demand "Middelstort".
+  - Output AUX1's "Holiday", "Away mode", "HW circulation", "Ext. HM
+    pump" and "Cool. mode ind. w delay" as the 2025 manuals print their
+    screen labels — in most languages; Holiday and Away mode in every one.
+  - Smart Price Adaption's Comfort / Saving / Saving PLUS as the 2025
+    manuals word them, now also in Russian, Ukrainian, Slovenian,
+    Romanian, Slovak and Estonian; German "Einsparung", Norwegian
+    "Besparelse" and Dutch "Opslaan" as NIBE's screens say.
+- **New translations: Romanian, Estonian, Russian, Hungarian, Slovak,
+  Lithuanian, Latvian, Slovenian, Bulgarian and Ukrainian** (`language:
+  ro`, `et`, `ru`, `hu`, `sk`, `lt`, `lv`, `sl`, `bg`, `uk`): the add-on
+  settings screen, and the value labels NIBE's installer manuals in those
+  languages name — operating mode, SG Ready, hot water demand, flow setting
+  and the like. Other labels stay English.
+- **Labels taken from the controller's menus read exactly as the menus
+  do, abbreviations included** (e.g. Dutch "Alleen bijverw", French
+  "Rad. + pl. chauff."): the screen abbreviates because the full words
+  don't fit, and Home Assistant now shows the same text. Hot water
+  demand's "Smart control" is translated where the menu translates it.
 
 ### Fixed
 
